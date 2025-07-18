@@ -1,0 +1,2 @@
+cd /tmp
+curl -O https://download-ib01.fedoraproject.org/pub/fedora/linux/releases/42/Everything/x86_64/os/Packages/g/grub2-efi-x64-modules-2.12-28.fc42.x86_64.rpm
