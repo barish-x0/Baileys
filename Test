@@ -1,16 +1,11 @@
-sudo dnf install -y git wxGTK3 wxBase.x86_64 wxGTK3-devel.x86_64 exfat-utils exfatprogs fuse-exfat python3-pip python3-wxpython4 gnome-disk-utility
-
-
-sudo pip3 install WoeUSB-ng
-
+sudo dnf install -y wget
+wget https://github.com/ventoy/Ventoy/releases/download/v1.0.99/ventoy-1.0.99-linux.tar.gz
+tar -xvf ventoy-1.0.99-linux.tar.gz
+cd ventoy-1.0.99
 
 lsblk
 
-
-sudo umount /dev/sdX*
-
+sudo ./Ventoy2Disk.sh -i /dev/sdb
 
 
-sudo woeusb --target-filesystem NTFS --device ~/Downloads/Win10.iso /dev/sdX
-
-
+cp /home/viper/win10.iso /run/media/viper/Ventoy/
