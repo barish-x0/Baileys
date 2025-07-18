@@ -1,18 +1,10 @@
+cp /path/to/your/downloaded/grub2-efi-x64-modules-2.12-32.fc42.noarch.rpm /tmp/
+
 cd /tmp
-curl -O https://download-ib01.fedoraproject.org/pub/fedora/linux/releases/42/Everything/x86_64/os/Packages/g/grub2-efi-x64-modules-2.12-28.fc42.x86_64.rpm
-
-rpm -ivh grub2-efi-x64-modules-2.12-28.fc42.x86_64.rpm
-
-rpm -Uvh --replacepkgs grub2-efi-x64-modules-2.12-28.fc42.x86_64.rpm
+rpm -Uvh --force grub2-efi-x64-modules-2.12-32.fc42.noarch.rpm
 
 ls /usr/lib/grub/x86_64-efi/modinfo.sh
 
 grub2-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=Nobara --recheck
 
 grub2-mkconfig -o /boot/grub2/grub.cfg
-
-exit
-reboot
-
-https://rpmfind.net/linux/rpm2html/search.php?query=grub2-efi-x64-modules&utm_source=chatgpt.com
-
